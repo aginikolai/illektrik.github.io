@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test filtres</title>
+	<style>
+		.test {
+			width: 300px;
+			height: 400px;
+			background: url(images_photo/photo-1-desktop.jpg);
+			border: 10px solid green;
+		}
+		.filter {
+			width: 299px;
+			height: 399px;
+			background: rgba(96, 34, 49, .5);
+		}
+	</style>
+</head>
+<body>
+	<div class="test">
+		<div class="filter"></div>
+	</div>
+	<script>
+		const filter = document.querySelector('.filter');
+		let hz = 10;
+		filter.style.background = `rgba(96, ${hz}, 49, .5)`;
+	</script>
+</body>
+</html>
