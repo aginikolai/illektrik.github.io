@@ -147,23 +147,28 @@ span {
 	display: flex;
 }
 .reason1_left {
-	height: 255px;
+	height: 175px;
 	flex:0.7;
 	background: #81b3d2;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-top: 40px;
+	padding-bottom: 40px;
 	
 }
 .reason1_left h2 {
 	color: white;
-	padding-top: 58px;
+	/*padding-top: 58px;*/
 }
 .reason1_left h3 {
 	color: white;
-	padding-top: 27px;
+	/*padding-top: 27px;*/
 	margin-left: 20%;
 	margin-right: 20%;
 }
 .reason1_left h3:last-child {
-	padding-top: 23px;
+	/*padding-top: 23px;*/
 }
 .reason1_right {
 	height: 255px;
@@ -203,22 +208,27 @@ span {
 	background: url(images/photo-bridge@1x.jpg) center center / 100% 100% no-repeat;
 }
 .reason2_right {
-	height: 255px;
+	height: 175px;
 	flex:0.7;
 	background: #81b3d2;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 .reason2_right h2 {
 	color: white;
-	padding-top: 51px;
+	
 }
 .reason2_right h3 {
 	color: white;
-	padding-top: 20px;
+	
 	margin-left: 20%;
 	margin-right: 20%;
 }
 .reason2_right h3:last-child {
-	padding-top: 19px;
+	
 }
 .reason2_more {
 	height: 330px;
