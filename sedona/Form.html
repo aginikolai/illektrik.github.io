@@ -1,0 +1,209 @@
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Форма</title>
+       <link rel="stylesheet" href="styles.css">
+ </head>
+ <body>
+       <header>
+               <div class="wrap">
+                       <div class="header_content">
+                               <ul>
+                                       <li><a href="index.html">ГЛАВНАЯ</a></li>
+                                       <li><a href="Galery.html">ФОТО И ВИДЕО</a></li>
+                                       <li class="desktop_logo"><img src="images/logotype-desktop.png" alt="" ></li>
+                                       <li class="tablet_logo"><img src="images/logotype-tablet.png" alt="" ></li>
+									                     <li><a href="Form.html">ФОРМА ОТЗЫВА</a></li>
+                                       <li><a href="#">HTML ACADEMY</a></li>
+                                                                                                    
+                                </ul>       
+                        </div>
+               </div>
+               <div class="mobile_menu_open">
+                  <div class="menu_mobile_close"></div>
+                  <button class="mob_menu_button"><a href="index.html">ГЛАВНАЯ </a></button>
+                  <button class="mob_menu_button"><a href="Galery.html">ФОТО И ВИДЕО </a></button>
+                  <button class="mob_menu_button"><a href="Form.html">ФОРМА ОТЗЫВА </a></button>
+                  <button class="mob_menu_button"><a href="#">HTML ACADEMY </a></button>
+               </div>
+               <div class="header_content_mob">
+                 <div class="mobile_menu_block"></div>
+                 <div class="mobile_menu_block">
+                   <img src="images/logotype-tablet.png" alt="">
+                 </div>
+                 <div class="mobile_menu_block">
+                   <a href="#" class="menu_open_button">&#9776</a>
+                 </div>
+               </div>
+               <div class="wrap">
+                       <div class="welcome_gallery"></div>
+                 </div>       
+    </header>
+
+    <main>
+      <div class="wrap_tablet">
+        <div class="wrap">
+          <div class="wrap_form">
+            <div class="intro_gallery">
+             <h4>оставьте свой отзыв</h4>
+             <h3>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях </h3>
+            </div>
+            <form action="">
+              <div class="form1">
+                <div class="form1_left">
+                  <h1>ваше общее впечатление:</h1>
+                    <div class="control-group">
+                          <label class="control control-radio">
+                              Скорее положительное
+                                  <input type="radio" name="radio" checked="checked" />
+                              <div class="control_indicator"></div>
+                          </label>
+                         <label class="control control-radio">
+                              Скорее отрицательное
+                                 <input type="radio" name="radio" />
+                              <div class="control_indicator"></div>
+                          </label>
+                          <label class="control control-radio">
+                              Затрудняюсь ответить
+                                 <input type="radio" name="radio"  />
+                              <div class="control_indicator"></div>
+                          </label>
+    
+                      </div>
+                </div>
+                <div class="form1_right">
+                  <h1>представтесь:</h1>
+                  <div class="inputs_flex first_flex"><p>ИМЯ:</p><input type="text" placeholder="Петр*"></div>
+                  <div class="inputs_flex"><p>ФАМИЛИЯ:</p><input type="text" placeholder="Иванов*"></div>
+                  <div class="inputs_flex"><p>ОТЧЕСТВО:</p><input type="text" placeholder="Александрович"></div>
+                  
+                  
+                   
+                 </div>
+              </div>
+              <div class="form2">
+                <div class="info_decor">
+                  <div class="decor_block"></div>
+                  <div class="decor_txt"><h1>контактная информация:</h1></div>
+                  <div class="decor_block"></div>
+                </div>
+                <div class="form2_info">
+                    <span>КОНТАКТНЫЙ ТЕЛЕФОН*:</span>
+                  <div class="inputs_flex form2_mail">
+                    <p>ТЕЛЕФОН*:</p>
+                    <input type="text" placeholder="Введите телефон">
+                    <div class="form2_img"><img src="images_gallery/phone.png" alt=""></div>
+                  </div>
+                 <span>ЭЛЕКТРОННАЯ ПОЧТА*:</span>
+                  <div class="inputs_flex form2_mail">
+                    
+                    
+                    <p>ЭЛЕКТРОННАЯ ПОЧТА*:</p>
+                    <input type="text" placeholder="Введите e-mail*">
+                    <div class="form2_img"><img src="images_gallery/mail.png" alt=""></div>
+                  </div>
+                </div>
+              </div>
+              <div class="form1_mob">
+                  
+                  <h1>ваше общее впечатление:</h1>
+                    <div class="control-group">
+                          <label class="control control-radio">
+                              Скорее положительное
+                                  <input type="radio" name="radio" checked="checked" />
+                              <div class="control_indicator"></div>
+                          </label>
+                         <label class="control control-radio">
+                              Скорее отрицательное
+                                 <input type="radio" name="radio" />
+                              <div class="control_indicator"></div>
+                          </label>
+                          <label class="control control-radio">
+                              Затрудняюсь ответить
+                                 <input type="radio" name="radio"  />
+                              <div class="control_indicator"></div>
+                          </label>
+    
+                      
+                </div>
+
+
+              </div>
+            <div class="form3">
+              <div class="info_decor">
+                  <div class="decor_block"></div>
+                  <div class="decor_txt"><h1>посещенные достопримечательности:</h1></div>
+                  <div class="decor_block"></div>
+                </div>
+                  <div class="control-group checkbox_group">
+                    <label class="control control-checkbox">
+                        Мост Дьявола
+                           <input type="checkbox"  />
+                       <div class="control_indicator"></div>
+                   </label>
+                   <label class="control control-checkbox">
+                        Гора-Колокол
+                           <input type="checkbox" />
+                       <div class="control_indicator"></div>
+                   </label>
+                   <label class="control control-checkbox">
+                       Слайд-парк
+                           <input type="checkbox" />
+                       <div class="control_indicator"></div>
+                   </label>
+                   <label class="control control-checkbox">
+                       Красные скалы
+                           <input type="checkbox" />
+                       <div class="control_indicator"></div>
+                   </label>
+    
+              </div>
+            </div>
+              <div class="form4">
+                  <div class="info_decor">
+                  <div class="decor_block"></div>
+                  <div class="decor_txt"><h1>опишите свои эмоции:</h1></div>
+                  <div class="decor_block"></div>
+
+                </div>
+                  
+                  <textarea name="text" placeholder="Опишите подробно все свои восторги" ></textarea>
+
+              </div>
+              <div class="form_send">
+                <button>ОТПРАВИТЬ ОТЗЫВ</button>
+                <P>*-Обязательные поля</P>
+              </div>
+          </div>
+            
+            </form>
+
+
+                
+    
+
+        </div>  
+      </div>
+    </main>
+    <footer>
+       <div class="wrap">
+         <div class="footer_info">
+            <div class="footer1">
+              <h1>#visitSEDONA</h1>
+            </div>
+            <div class="footer2">
+              <button><img src="images/icon-twitter.png" alt=""></button>
+              <button><img src="images/icon-facebook.png" alt=""></button>
+              <button><img src="images/icon-youtube1.png" alt=""></button>
+            </div>
+            <div class="footer3">
+              <h3>разработано</h3>
+                   <h3><a href="#"><img src="images/htmlacademy.png" alt=""></a></h3> 
+            </div>
+          </div>
+       </div>
+          
+        
+       </footer>
+  <script src="script.js"></script>
+</body>
