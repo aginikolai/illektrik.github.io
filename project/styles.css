@@ -689,6 +689,15 @@ svg {
 	font-weight: bold;
 	padding-right: 18%;
 }
+.portfolio_project_mid span:nth-child(2) {
+	cursor: pointer;
+	position: relative;
+	top:1px;
+	margin-right: -17%;
+}
+.portfolio_project_mid span:nth-child(2):hover {
+	color: black;
+}
 .portfolio_project_mid p {
 	padding-top: 40px;
 	font-size: 14px;
