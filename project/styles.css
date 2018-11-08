@@ -1390,7 +1390,7 @@ textarea::placeholder {
 	.portfolio_project_photo {
     	width: 100%;
     	height: 349px;
-    	background: url(images_portfolio/tumblr_nswysyHICC1sfyngeo2_1280-mokhgqwoip430hckostcf4rafjnml63dn1z0lg53a0.jpg) center center / 100% no-repeat;
+    	background: url(images_portfolio/imageBig1.jpg) center center / 100% no-repeat;
 
 	}
 	.agency_intro {
@@ -1558,7 +1558,7 @@ textarea::placeholder {
 		overflow: hidden;
 	}
 	.load_more {
-		margin-bottom: 0;
+		margin-bottom: 30px;
 	}
 	.inputs_top input:first-child {
 		margin-right: 2%;
@@ -1633,7 +1633,7 @@ textarea::placeholder {
 		margin-right: 1%;
 	}
 	.portfolio_project_photo {
-		background:	url(images_portfolio/tumblr_nswysyHICC1sfyngeo2_1280-mokhgqwoip430hckostcf4rafjnml63dn1z0lg53a0.jpg) center;
+		background:	url(images_portfolio/imageBig1.jpg) center;
 	}
 	.related_works_gallery {
 		height: auto;
@@ -1739,6 +1739,47 @@ textarea::placeholder {
 	}
 	.area_post4 {
 		background-size: 100%;
+	}
+	.blog_area {
+		grid-template-columns: repeat(1, 1fr);
+		margin-left: 3%;
+		margin-right: 3%;
+	}
+	.blog_area_post {
+		padding-left: 5%;
+		padding-right: 5%;
+		grid-row: span 12;
+	}
+	.blog_area_post h5 {
+		padding-top: 20px;
+	}
+	.area_post1 {
+		grid-row: span 9;
+	}
+	.area_post4 {
+		grid-row: span 7;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.area_post6 {
+		grid-row: span 8;
+		margin-bottom: 30px;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.agency_intro {
+		text-align: center;
+		display: block;
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	.about_intro h2 {
+		text-align: center;
+	}
+	.rights {
+		font-size: 11px;
 	}
 
 	

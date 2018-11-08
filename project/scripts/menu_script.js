@@ -7,7 +7,7 @@ let isMenuOpen = false;
 menu_open.addEventListener('click', () => {
 	if(!isMenuOpen) {
 		menu_body.style.display = 'block';
-		sympol[0].innerHTML = '&#x274E';
+		sympol[0].innerHTML = '&times';
 		isMenuOpen = true;
 	} else {
 		menu_body.style.display = 'none';
