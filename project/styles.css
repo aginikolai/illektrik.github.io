@@ -653,6 +653,10 @@ svg {
 				#ebebeb;
 	cursor: pointer;
 }
+.project2_gall {
+	background: url(images_portfolio/imageBig5.jpg) center center no-repeat,
+				#ebebeb;
+}
 .gall_photo2 {
 	background: url(images_portfolio/imageSmall2.jpg) center center;
 }
@@ -661,6 +665,19 @@ svg {
 }
 .gall_photo4 {
 	background: url(images_portfolio/imageSmall4.jpg) center;
+}
+.gall_photo2-1 {
+	background: url(images_portfolio/imageSmall5.jpg) center center;
+	/*background-size: 100% 100%;*/
+}
+.gall_photo2-2 {
+	background: url(images_portfolio/imageSmall6.jpg) left center;
+}
+.gall_photo2-3 {
+	background: url(images_portfolio/imageSmall7.jpg) center;
+}
+.gall_photo2-4 {
+	background: url(images_portfolio/imageSmall8.jpg) center;
 }
 .project_gallery_photo:hover {
 	filter: brightness(70%);
@@ -687,13 +704,16 @@ svg {
 	color: #555555;
 	text-transform: none;
 	font-weight: bold;
-	padding-right: 18%;
+	
+}
+.portfolio_project_mid span:first-child {
+	margin-right: 15%;
 }
 .portfolio_project_mid span:nth-child(2) {
 	cursor: pointer;
 	position: relative;
-	top:1px;
-	margin-right: -17%;
+	top: 2px;
+	padding-right: 7px;
 }
 .portfolio_project_mid span:nth-child(2):hover {
 	color: black;
@@ -721,6 +741,12 @@ svg {
 	text-transform: none;
 	text-align: left;
 	line-height: 30px;
+}
+.project2_right {
+	margin-right: 0;
+}
+.project2_left {
+	margin-right: 4%;
 }
 .post_tags span {
 	font-size: 16px;
@@ -1794,5 +1820,8 @@ textarea::placeholder {
 	
 }
 .play_stop svg:last-child {
+	display: none;
+}
+.project2 {
 	display: none;
 }
