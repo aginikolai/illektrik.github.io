@@ -1,0 +1,24 @@
+body {
+	font-family: 'Poppins', sans-serif;
+}
+* {
+	padding: 0;
+	margin: 0;
+
+}
+li {
+	list-style: none;
+	display: flex;
+}
+a {
+	text-decoration: none;
+
+}
+header {
+	background: #f6f6f6;
+	padding: 22px 0;
+}
+.list {
+	width: 400px;
+	height: 50px;
+}

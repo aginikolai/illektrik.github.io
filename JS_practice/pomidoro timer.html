@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>timer</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		span {
+			position: relative;
+			top: 3px;
+		}
+		svg {
+			height: 30px;
+			width: 30px;
+			color: black;
+			cursor: pointer;
+		}
+		svg:hover {
+			color: #828282FF;
+		}
+		button {
+			width: 100px;
+			height: 50px;
+		    cursor: pointer;
+			display: block;
+			margin: auto;
+			margin-top: 40px;
+			background: #3D3D3DFF;
+			border: none;
+			color: #6C6F92FF;
+			font-weight: bold;
+			border-radius: 5px;
+		}
+		button:hover {
+			background:#828282FF;
+			color: black;
+		}
+		button:active {
+			background: white;
+		}
+		.addMinutes {
+			font-size: 25px;
+			font-weight: bold;
+			padding-top: 5px;
+			height: 70px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		.timeBody {
+			height: 70px;
+		}
+		.timer_area {
+			display: flex;
+			margin: auto;
+			align-items: center;
+			width: 100%;
+			justify-content: center;
+		}
+		.currentTime {
+			text-align: center;
+			font-size: 70px;
+			color: #383838FF;
+			font-family: 'Roboto';
+			margin-top: 50px;
+		}
+		.addMin {
+			width: 105px;
+			display: flex;
+			justify-content: space-between;
+			margin: auto;
+		}
+		.addMin h1 {
+			cursor: pointer;
+			font-size: 40px;
+			margin-left:  -3px;
+			margin-right: 7.5px;
+		}
+		.addMin h1:hover {
+			color: #828282FF;
+		}
+		.addMin h1:last-child {
+			position: relative;
+			top: -4px;
+		}
+		.play-stop {
+			display: flex;
+			margin: auto;
+			width: 110px;
+			height: 65px;
+			align-items: center;
+			justify-content: space-between;
+		}
+	</style>
+</head>
+<body style="background: linear-gradient(-100deg, #4839C5FF, #659199FF)">
+	<h1 class="currentTime"><span class="min">5</span>:<span class="sec">00</span></h1>
+	<div class="addMin">
+		<h1>+</h1>
+		<h1>-</h1>
+	</div>
+	<div class="play-stop">
+		<svg aria-hidden="true" data-prefix="fas" data-icon="play" class="svg-inline--fa fa-play fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg>
+		<svg aria-hidden="true" data-prefix="fas" data-icon="pause" class="svg-inline--fa fa-pause fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"></path></svg>
+	</div>
+	<button>SET AGAIN</button>
+	<audio src="Cool-alarm-tone-notification-sound.mp3"></audio>
+	<script>
+		const timeSec = document.querySelector('.sec');
+		const area = document.querySelector('.play-stop');
+		const play = document.getElementsByTagName('svg');
+		const minutes = document.querySelector('.min');
+		const timeArea = document.querySelector('.currentTime');
+		let setTimer;
+		let isTimerOff = true;
+		const sound = document.getElementsByTagName('audio');
+		play[0].addEventListener('click', timerAction );
+		
+		function timerAction () {
+			isTimerOff = false;
+			play[0].style.color = '#828282FF';
+			play[1].style.color = 'black';
+			//logic of setInterval
+			 setTimer = setInterval(() => {
+				let timeNow = parseFloat(timeSec.innerHTML);
+				let minNow = parseFloat(minutes.innerHTML);
+				if (minNow == 0 && timeNow == 0) {
+					clearInterval(setTimer);
+					sound[0].play();
+					
+				} else if (timeNow == 0) {
+					minNow--;
+					minutes.innerHTML = minNow;
+					timeNow = 60;
+					timeNow--;
+					timeSec.innerHTML = timeNow;
+				} else if(timeNow <= 10) {
+					timeNow--;
+					timeSec.innerHTML = '0' + timeNow;
+				} else if(minNow == 0 && timeNow == 59) {
+					timeArea.style.color = 'red';
+					timeNow--;
+					timeSec.innerHTML = timeNow;
+				} else {
+					timeNow--;
+					timeSec.innerHTML = timeNow;
+				}
+			}, 1000)
+		}
+		//pause
+		play[1].addEventListener('click', function () {
+			play[1].style.color = '#828282FF';
+			play[0].style.color = 'black';
+			clearInterval(setTimer);
+		});
+		// adding minutes
+		const addMin = document.querySelector('.addMin');
+		const plusMinus = addMin.getElementsByTagName('h1');
+		plusMinus[0].addEventListener('click', function () {
+			let minNow = parseFloat(minutes.innerHTML);
+			if (isTimerOff && minNow < 20) {
+				minNow++;
+				minutes.innerHTML = minNow;
+			}
+		});
+		plusMinus[1].addEventListener('click', function () {
+			let minNow = parseFloat(minutes.innerHTML);
+			if (isTimerOff && minNow > 1) {
+				let minNow = parseFloat(minutes.innerHTML);
+				minNow--;
+				minutes.innerHTML = minNow;
+			}
+		});
+		//new timer
+		const newTimer = document.getElementsByTagName('button');
+		newTimer[0].addEventListener('click', function () {
+			clearInterval(setTimer);
+			isTimerOff = true;
+			minutes.innerHTML = '5';
+			timeSec.innerHTML = '00';
+			play[0].style.color = 'black';
+			timeArea.style.color = '#383838FF';
+			sound[0].pause();
+		})
+
+	</script>
+</body>
+</html>
