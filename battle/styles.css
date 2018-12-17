@@ -1,0 +1,136 @@
+body {
+	font-family: 'Poppins', sans-serif;
+}
+* {
+	padding: 0;
+	margin: 0;
+
+}
+li {
+	list-style: none;
+	display: flex;
+}
+button {
+	width: 100px;
+	height: 50px;
+	background: #515151FF;
+	border:none;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	margin-top: 50px;
+}
+.buttelfield {
+	width: 560px;
+	height: 560px;
+	display: flex;
+	flex-wrap: wrap;
+	/*margin: 0 auto;*/
+	margin-top: 10px;
+    border: 1px solid black;
+	/*background: black;*/
+}
+.container {
+	width: 52px;
+	height: 52px;
+	background: #0094FFFF;
+	border: 2px solid black;
+	color: #803737FF;
+	text-align: center;
+	font-size: 50px;
+	cursor: url(target.png), default;
+}
+.container:hover {
+	border: 2px solid red;
+}
+ p {
+	opacity: 0;
+	
+
+}
+
+.letters {
+	width: 56px;
+	height: 560px;
+	display: flex;
+	flex-direction: column;
+	/*margin: 0 auto;*/
+	margin-top: 44px;
+}
+.letter {
+	width: 56px;
+	height: 56px;
+	font-weight: bold;
+	font-size: 40px;
+	text-align: center;
+	color: #3A3A3AFF;
+	padding-top: 11px;
+	padding-right: 18px;
+
+}
+.wrap {
+	display: flex;
+	justify-content: center;
+
+}
+.numbers {
+	width: 560px;
+	height: 40px;
+	display: flex;
+}
+.box {
+	width: 56px;
+	height: 40px;
+	font-weight: bold;
+	font-size: 40px;
+	text-align: center;
+	color: #2B2B2BFF;
+}
+.wrap-horizontal {
+	display: flex;
+	flex-direction: column;
+}
+.info {
+	width: 290px;
+	height: 560px;
+	background: #C4C4D0EC;
+	margin-top: 50px;
+	margin-left: 70px;
+}
+.info h3 {
+	margin-top: 15px;
+	margin-left: 10px;
+	margin-bottom: 15px;
+}
+.infoBox {
+	
+	margin-top: 150px;
+	font-size: 40px;
+}
+.infoBox h3 {
+	text-align: center;
+	color: #7F0000FF;
+	margin-top: 5px;
+}
+.anime {
+	animation: blink 400ms alternate 3;
+
+}
+@keyframes blink {
+		from {
+			
+			font-size: 0px;
+		} 
+		50% {
+			font-size: 15px
+		}
+		to {
+			
+			font-size: 30px;
+		}
+}
+.new_game {
+	display: none;
+}
