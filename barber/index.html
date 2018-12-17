@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width" />
+	<title>BarberShop</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="modal_overlay"></div>
+		<div class="main_menu">
+			<div class="wrap">
+				<ul class="main_menu__ul">
+					<li class="main_menu__li"><a href="index.html" class="main_menu__a">главная</a></li>
+					<li class="main_menu__li"><a href="gallery.html" class="main_menu__a">наши работы</a></li>
+					<li class="main_menu__li"><a href="form.html" class="main_menu__a">записаться</a></li>
+					<li class="main_menu__li"><a href="#mapMe" class="main_menu__a">контакты</a></li>
+					<li class="main_menu__li"><a href="#" class="main_menu__a">html academy</a></li>
+					<li class="main_menu__li">
+						<a href="#" class="main_menu__a main_menu__a--right">
+						<img src="img/login.png" alt="" class="main_menu__img">
+						<span class="enter_hide">войти</span> 
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="main_background">
+			<div class="mob_menu_close">
+				<svg aria-hidden="true" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+			
+			</div>
+		</div>
+		<div class="menu_mob">
+			<div class="mob_menu_show">
+				<div class="mob_menu_block"><a href="index.html" class="main_menu__a">главная</a></div>
+				<div class="mob_menu_block"><a href="gallery.html" class="main_menu__a">наши работы</a></div>
+				<div class="mob_menu_block"><a href="form.html" class="main_menu__a">записаться</a></div>
+				<div class="mob_menu_block"><a href="#mapMe" class="main_menu__a">контакты</a></div>
+				<div class="mob_menu_block"><a href="#" class="main_menu__a">html academy</a></div>
+				<div class="mob_menu_block mob_menu_block--dark"><a href="#" class="main_menu__a main_menu__a--right">
+						<img src="img/login.png" alt="" class="main_menu__img">
+						<span class="enter_hide">Войти</span> 
+						</a></div>
+			</div>
+			<h1 class="menu_mob__h1">главная</h1>
+			<div class="mob_menu_open">
+				<svg aria-hidden="true" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+			</div>
+		</div>
+	</header>
+	<main>
+		
+		<div class="login anim_upside">
+			<div class="menu_mobile_close close_order "></div>
+			<h1 class="login__h1">личный кабинет</h1>
+			<p class="login__p">Введите свой логин и пароль, чтобы войти</p>
+			<svg aria-hidden="true" data-prefix="fas" data-icon="user" class="svg-inline--fa fa-user fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path></svg>
+			<form action="">
+				<input type="text" class="login__input" placeholder="Логин">
+				<svg aria-hidden="true" data-prefix="fas" data-icon="lock" class="svg-inline--fa fa-lock fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path></svg>
+				<input type="password" class="login__input login__input--mt" placeholder="Пароль">
+				<div class="form_wrapper">
+					<label class="control--check control-checkbox--check control_check">
+        			Запомните меня
+            			<input type="checkbox"  />
+        			<div class="control_indicator--check"></div>
+    				</label>
+    				<a href="#" class="form_wrapper__a">Я забыл пароль!</a>
+				</div>
+				<input type="submit" class="form__submit" value="ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ">
+
+			</form>
+			
+		</div>
+		<div class="about_us">
+			<div class="wrap">
+				<div class="prices">
+					<div class="prices_figure">
+						<img src="img/Layer-29.png" alt="" class="prices_figure--img">
+					</div>
+					<div class="prices__div prices__div--white">
+						<h1 class="prices__h1">Стрижка у нас это выгодно!</h1>
+						<p class="prices__p">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
+						<p class="prices__p prices__p--light">* — приведённые данные ложь</p>
+					</div>
+					<div class="prices__div prices__div--dark">
+						<div class="prices__smallBlock prices__smallBlock--back1">
+							<h2 class="prices__h2">1 500 *</h2>
+							<p class="prices__p prices__p--white">рублей вложений</p>
+						</div>
+						<div class="prices__smallBlock prices__smallBlock--back2">
+							<h2 class="prices__h2"> 90 000</h2>
+							<p class="prices__p prices__p--white">подстриженных волос</p>
+							
+						</div>
+					</div>
+					<div class="prices__div prices__div--dark">
+						<div class="prices__smallBlock prices__smallBlock--back3">
+							<h2 class="prices__h2"> 7 200</h2>
+							<p class="prices__p prices__p--white">секунд времени мастера</p>
+						</div>
+						<div class="prices__smallBlock prices__smallBlock--back4">
+							<h2 class="prices__h2 prices__h2--wide">500 000 *</h2>
+							<p class="prices__p prices__p--white">лайков и комплиментов</p>
+						</div>
+					</div>
+				</div>
+				<div class="about_info">
+					<div class="about_info__div">
+						<img src="img/advantage-1-illustration.png" alt="" class="about_info__img">
+						<div class="about_txt">
+							<h1 class="about_info__h1">быстро</h1>
+							<p class="prices__p--white about_info__p">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки</p>
+						</div>
+						
+					</div>
+					<div class="about_info__div about__div--hide">
+						<img src="img/advantage-2-illustration.png" alt="" class="about_info__img">
+						<div class="about_txt">
+							<h1 class="about_info__h1">круто</h1>
+							<p class="prices__p--white about_info__p">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.</p>
+						</div>
+					</div>
+					<div class="about_info__div about__div--hide">
+						<img src="img/advantage-3-illustration.png" alt="" class="about_info__img">
+						<div class="about_txt">
+							<h1 class="about_info__h1">дорого</h1>
+							<p class="prices__p--white about_info__p">Наши мастера — профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
+						</div>	
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="secret"></div>
+		<div class="news for_hover">
+			<div class="wrap">
+				<div class="news_events">
+					<div class="news_body__div">
+						<div class="news_body__left_div news--hide"></div>
+						<div class="news_body__right_div news_mob_title">
+							<h1 class="news_events__h1">новости и акции</h1>
+						</div>
+					</div>
+					<div class="news_body__div news_mob--hide"></div>
+					<div class="news_body__div news_body__div--moveRight news_mob--hide">
+						<button class="news_events__btn">показать все</button>
+					</div>
+				</div>
+				<div class="news_body">
+					<div class="news_body__div news_mob--top">
+						<div class="news_body__left_div news_body__left_div--back">
+							<h1 class="news_left__h1">29</h1>
+							<h2 class="news_left__h2">сент</h2>
+						</div>
+						<div class="news_body__right_div">
+							<p class="news_right__p">Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</p>
+						</div>
+					</div>
+					<div class="news_body__div news_mob--bottom">
+						<div class="news_body__left_div news_body__left_div--back">
+							<h1 class="news_left__h1">19</h1>
+							<h2 class="news_left__h2">сент</h2>
+						</div>
+						<div class="news_body__right_div">
+							<p class="news_right__p">В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите записаться!</p>
+						</div>
+					</div>
+					<div class="news_body__div news--hide">
+						<div class="news_body__left_div news_body__left_div--back">
+							<h1 class="news_left__h1 news_left__h1--move">9</h1>
+							<h2 class="news_left__h2">сент</h2>
+						</div>
+						<div class="news_body__right_div">
+							<p class="news_right__p">Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		    <button class="mob__btn">показать все</button>
+		</div>
+		<div class="wrap feedback_mob">
+			<div class="news_events">
+					<div class="news_body__div">
+						<div class="news_body__left_div news--hide"></div>
+						<div class="news_body__right_div">
+							<h1 class="news_events__h1">отзывы о нас</h1>
+						</div>
+					</div>
+					<div class="news_body__div news_mob--hide"></div>
+					<div class="news_body__div news_body__div--moveRight news_mob--hide">
+						<button class="news_events__btn">оставить свой</button>
+					</div>
+				</div>
+				<div class="news_events feedback">
+					<div class="news_body__div">
+						<div class="news_body__left_div">
+							<div class="feedback_arrow">
+								<svg aria-hidden="true" data-prefix="fas" data-icon="caret-left" class="svg-inline--fa fa-caret-left fa-w-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M192 127.338v257.324c0 17.818-21.543 26.741-34.142 14.142L29.196 270.142c-7.81-7.81-7.81-20.474 0-28.284l128.662-128.662c12.599-12.6 34.142-3.676 34.142 14.142z"></path></svg>
+							</div>
+						</div>
+						<div class="news_body__right_div feedback_main feedback_center">
+							
+						</div>
+					</div>
+					<div class="news_body__div">
+						<div class="news_body__left_div feedback_center">
+							
+						</div>
+						<div class="news_body__right_div feedback_center txt_feedback">
+							<h3 class="news_body__h3">Тревис Баркер</h3>
+							<p class="news_body__p">Спасибо за лысину! Был проездом в Москве, заскочил<br> побриться, чтобы было видно новую татуировку!</p>
+							<div class="feedback_slider">
+								<img src="img/current-slider.png" alt="" class="feedback_slider__img">
+								<img src="img/slider-indicator.png" alt="" class="feedback_slider__img">
+								<img src="img/slider-indicator.png" alt="" class="feedback_slider__img">
+							</div>
+						</div>
+					</div>
+					<div class="news_body__div news_body__div--moveRight ">
+						<div class="news_body__left_div feedback_left"></div>
+						<div class="news_body__right_div feedback_right">
+							<div class="feedback_arrow feedback_arrow--right">
+								<svg aria-hidden="true" data-prefix="fas" data-icon="caret-right" class="svg-inline--fa fa-caret-right fa-w-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path></svg>
+							</div>
+						</div>
+
+						
+					</div>
+				</div>
+				<div class="feedback_tablet">
+					<div class="feedback_tablet__div news_mob--hide">
+						<svg aria-hidden="true" data-prefix="fas" data-icon="caret-left" class="svg-inline--fa fa-caret-left fa-w-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M192 127.338v257.324c0 17.818-21.543 26.741-34.142 14.142L29.196 270.142c-7.81-7.81-7.81-20.474 0-28.284l128.662-128.662c12.599-12.6 34.142-3.676 34.142 14.142z"></path></svg>
+					</div>
+					<div class="feedback_tablet__div feedback__div--center">
+						<div class="feedback_tablet_img"></div>
+						<div class="feedback_tablet_txt">
+							<h1 class="tablet_txt__h1">Тревис Баркер</h1>
+							<p class="tablet_txt__p">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+							
+						</div>
+					</div>
+					<div class="feedback_tablet__div news_mob--hide">
+						<svg aria-hidden="true" data-prefix="fas" data-icon="caret-right" class="svg-inline--fa fa-caret-right fa-w-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path></svg>
+							</div>
+					</div>
+
+						
+				</div>
+				
+		</div>
+	</main>
+	<footer class="footer" id="mapMe">
+		<div class="wrap">
+			<div class="news_events footer__div ">
+					<div class="news_body__div news_mob--hide">
+						<div class="news_body__left_div">
+							<h1 class="footer__h1">барбершоп бородинский</h1>
+							<p class="footer__p">г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
+							тел.: +7 (812) 555-66-66</p>
+						</div>
+						<div class="news_body__right_div">
+							
+						</div>
+					</div>
+					<div class="news_body__div news--hide">
+						<div class="news_body__left_div"></div>
+						<div class="news_body__right_div footer__div--flex">
+							<p class="footer__p footer__p--top">Давайте дружить!</p>
+							<div class="footer_icons">
+								<div class="footer_icons__div">
+									<span class="footer_icons__span icons_hide">B</span>
+								</div>
+								<div class="footer_icons__div">
+									<svg aria-hidden="true" data-prefix="fab" data-icon="facebook-f" class="svg-inline--fa fa-facebook-f fa-w-9 icons_hide" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path height='10px' fill="white" d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path></svg>
+								</div>
+								<div class="footer_icons__div">
+									<svg aria-hidden="true" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram fa-w-14 icons_hide" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="news_body__div news_body__div--moveRight ">
+						<div class="news_body__left_div"></div>
+						<div class="news_body__right_div footer__div--flex footer__div--flexRight">
+							<p class="footer__p footer__p--top footer__p--right">Разработано:</p>
+							<button class="news_events__btn footer__btn">html academy</button>
+					</div>
+			</div>
+			<div class="footer_info_mob">
+				<h1 class="footer__h1">Барбершоп Бородинский</h1>
+				<p class="footer__p">г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
+				<button class="mob__btn mob__btn--white">+7 (812) 555-66-66</button>
+			</div>
+		</div>
+		<div class="tablet_social">
+			<div class="tablet_social__div"><span class="footer_icons__span">B</span></div>
+			<div class="tablet_social__div tablet_social__div--center"> 
+				<svg aria-hidden="true" data-prefix="fab" data-icon="facebook-f" class="svg-inline--fa fa-facebook-f fa-w-9" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path height='10px' fill="white" d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path></svg>
+			</div>
+			<div class="tablet_social__div">
+				<svg aria-hidden="true" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+			</div>
+		</div>
+	</div>
+	<div class="made_by_mob">
+		<p class="footer__p footer__p--top footer__p--right">Разработано:</p>
+		<button class="mob__btn mob__btn--white">html academy</button>
+	</div>
+	</footer>
+	
+	<script src="scripts/mobile_menu.js"></script>
+	<script src="scripts/personal_page.js"></script>
+	<script src="scripts/sliders.js"></script>
+	<script src="scripts/change_back.js"></script>
+</body>
+</html>
