@@ -1,0 +1,144 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	background: #fafafa;
+}
+h1 {
+	color: #303030FF;
+	text-align: center;
+	font-weight: 400;
+	padding-top: 50px;
+}
+h2 {
+	color: #303030FF;
+	text-align: center;
+	font-weight: 400;
+	padding-top: 50px;
+	font-size: 20px;
+}
+p {
+	padding-left: 20px;
+}
+input[type=text] {
+	height: 40px;
+	width: 60%;
+	padding-left: 10px;
+	font-size: 16px;
+	background: #fafafa;
+	border: 1px solid #A0A0A0FF;
+	text-transform: none;
+}
+svg {
+	height: 40px;
+}
+button {
+	background: transparent;
+	border: none;
+	margin-left: 30px;
+	cursor: pointer;
+	color: #303030FF;
+}
+button:hover {
+	color: white;
+}
+.add_new {
+	width: 100%;
+	height: 300px;
+	background: linear-gradient(-100deg, #4839C5FF, #659199FF);
+}
+.new_target_block {
+	display: flex;
+	margin: auto;
+	margin-top: 30px;
+	width: 70%;
+	height: 40px;
+	justify-content: center;
+}
+.items {
+	width: 60%;
+	height: 100px;
+	display: block;
+	margin: auto;
+	margin-top: 40px;
+}
+
+.item_area {
+	width: 50%;
+	height: 50px;
+	background: linear-gradient(-100deg, #4839C5FF, #659199FF);
+	border: 2px solid #404040FF;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	color: white;
+	position: absolute;
+	margin: auto;
+	left:50%; 
+	margin-left:-25%;
+	text-transform: none;
+}
+.item_area:hover {
+	transform: scale(1.03);
+	box-shadow: 5px 0 5px 0 #cfcfcf;
+}
+.done {
+	background: linear-gradient(-100deg, #4839C5FF, #659199FF);
+	color: #0C0C0CFF;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 18px;
+	height: 50px;
+	border: 1px solid #494949FF;
+	width: 20%;
+	border-radius: 5px;
+	display: block;
+	margin: auto;
+	margin-bottom: 100px;
+	margin-top: 50px;
+}
+.done:hover {
+	background: linear-gradient(-100deg, #4839C5FF, #4881B6FF);
+}
+.list_of_done {
+	display: none;
+
+}
+.done_item {
+	text-align: center;
+	text-transform: none;
+	color: #757575FF;
+	padding-left: 0;
+	margin-top: 20px;
+}
+.back_to_deals {
+	display: none;
+}
+.fa-exclamation-circle {
+	position: absolute;
+	left: 95%;
+	top:20px;
+	cursor: pointer;
+}
+.fa-exclamation-circle:hover {
+	color: white;
+}
+.info_block {
+	position: absolute;
+	text-transform: none;
+	background: #A0A0A0FF;
+	opacity: 0.9;
+	color: #303030FF;
+	padding: 40px 20px;
+	left: 50%;
+	top: 10px;
+	width: 20%;
+	margin-left: 25%;
+	display: none;
+}
+.info_block p {
+	padding-bottom: 15px;
+}
