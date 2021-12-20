@@ -1,5 +1,66 @@
-$red: black;
+@import "~normalize.css";
 
-body {
-  background: $red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game_window {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+.battle_field {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  width: 37vw;
+  height: 37vw;
+  border: 1px solid black;
+  cursor: pointer;
+  @media screen and (max-width: 1024px) {
+    width: 70vw;
+    height: 70vw;
+  }
+  @media screen and (max-width: 567px) {
+    width: 85vw;
+    height: 85vw;
+  }
+}
+
+.battle_info {
+  margin-top: 30px;
+  width: 37vw;
+  min-height: 150px;
+  border: 1px solid black;
+  @media screen and (max-width: 1024px) {
+    width: 70vw;
+  }
+  @media screen and (max-width: 567px) {
+    width: 85vw;
+  }
+}
+
+.battle_cell {
+  width: calc(3.36vw - 0.15px);
+  height: calc(3.36vw - 0.11px);
+  border: 1px solid black;
+  background: #75a6d7;
+  @media screen and (max-width: 1024px) {
+    width: calc(7vw - 0.2px);
+    height: 7vw;
+  }
+  @media screen and (max-width: 567px) {
+    width: calc(8.5vw - 0.2px);
+    height: 8.5vw;
+  }
+
+  &:hover {
+    border: 1px solid red;
+  }
 }
