@@ -1,3 +1,5 @@
+// Этот класс создан для того, что бы вызывать в нем все встроенные методы js для работы с dom - в других классах будут уже вызываться модифицированные методы
+
 class Dom {
   constructor(selector) {
     this.$el = typeof selector === 'string'
@@ -18,8 +20,12 @@ class Dom {
     return this
   }
 
-  on() {
+  on(eventType, callback) {
+    this.$el.addEventListener(eventType, callback)
+  }
 
+  off(eventType, callback) {
+    this.$el.removeEventListener(eventType, callback)
   }
 
   append(node) {

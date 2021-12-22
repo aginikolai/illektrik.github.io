@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 .game_window {
   width: 100%;
   min-height: 100vh;
@@ -21,8 +25,8 @@
   margin-top: 50px;
   width: 37vw;
   height: 37vw;
-  border: 1px solid black;
   cursor: pointer;
+  padding-bottom: 1px;
   @media screen and (max-width: 1024px) {
     width: 70vw;
     height: 70vw;
@@ -47,20 +51,37 @@
 }
 
 .battle_cell {
-  width: calc(3.36vw - 0.15px);
-  height: calc(3.36vw - 0.11px);
+  display: flex;
+  width: calc(3.36vw);
+  height: calc(3.36vw);
   border: 1px solid black;
   background: #75a6d7;
+  align-items: center;
+  justify-content: center;
   @media screen and (max-width: 1024px) {
-    width: calc(7vw - 0.2px);
-    height: 7vw;
+    width: calc(6.36vw);
+    height: 6.36vw;
   }
   @media screen and (max-width: 567px) {
-    width: calc(8.5vw - 0.2px);
-    height: 8.5vw;
+    width: calc(7.725vw);
+    height: 7.725vw;
   }
 
   &:hover {
     border: 1px solid red;
   }
+
+  p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+.battle_cell--white {
+  background-color: white;
+  border: 1px solid white;
+  &:hover {
+    border: none;
+  }
+  cursor: default;
 }

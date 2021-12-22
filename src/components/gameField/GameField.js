@@ -1,4 +1,5 @@
 import {NewGameComponent} from "../../core/NewGameComponent";
+import {createGameField} from "./gameField.template";
 
 export class GameField extends NewGameComponent {
   static className = 'wrapper'
@@ -11,134 +12,12 @@ export class GameField extends NewGameComponent {
   }
 
   onClick(event) {
-    console.log('onClick', event)
+    console.log('click', event.target)
   }
 
   toHTML() {
     return `
-      <div class="battle_field">
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-        <div class="battle_cell"></div>
-      </div>
+      ${createGameField()}
     `
   }
 }
