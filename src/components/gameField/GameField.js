@@ -15,12 +15,16 @@ export class GameField extends NewGameComponent {
 
   shoots = []
   usedCells = []
+  singleShips = []
+  doubleShips = []
+  tripleShips = []
+  bigShip = []
 
   onClick(event) {
     if (event.target.dataset.coords) {
       const {coords} = event.target.dataset
-
-      if (!this.shoots.includes(coords)) {
+      // запилить функцию-проверку на то, что точка совпадает с какой-либо точкой выствленных краблей и добавить classname или что-то еще
+      if (!this.shoots.includes(coords) && !this.usedCells.includes(coords)) {
         this.shoots.push(coords)
         const $target = $(event.target)
         $target.html('<p>X</p>')
@@ -31,12 +35,12 @@ export class GameField extends NewGameComponent {
 
 
   toHTML() {
-    createBigShip(this.usedCells)
-    createTripleShip(this.usedCells)
-    createDoubleShips(this.usedCells)
-    createSingleShips(this.usedCells)
+    createBigShip(this.usedCells, this.bigShip)
+    createTripleShip(this.usedCells, this.tripleShips)
+    createDoubleShips(this.usedCells, this.doubleShips)
+    createSingleShips(this.usedCells, this.singleShips)
     return `
-      ${createGameField()}
+      ${createGameField(this.singleShips, this.doubleShips, this.tripleShips, this.bigShip)}
     `
   }
 }

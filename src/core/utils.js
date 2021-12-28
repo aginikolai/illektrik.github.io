@@ -6,8 +6,7 @@ export function capitalize(string = '') {
 }
 
 
-export const createSingleShips = (usedCells) => {
-  const singleShipsCoords = []
+export const createSingleShips = (usedCells, singleShips) => {
   let numberOfShips = 0
 
   while (numberOfShips < 4) {
@@ -18,7 +17,7 @@ export const createSingleShips = (usedCells) => {
       let closeCells = [`${x-1}-${y-1}`, `${x}-${y-1}`, `${x+1}-${y-1}`,
                         `${x-1}-${y}`, `${x}-${y}`, `${x+1}-${y}`,
                         `${x+1}-${y+1}`, `${x}-${y+1}`, `${x+1}-${y+1}`]
-      singleShipsCoords.push([`${x}-${y}`])
+      singleShips.push([`${x}-${y}`])
 
       closeCells.forEach(item => {
         if (!usedCells.includes(item)) usedCells.push(item)
@@ -27,11 +26,9 @@ export const createSingleShips = (usedCells) => {
       numberOfShips +=1
     }
   }
-  console.log(singleShipsCoords)
 }
 
-export const createDoubleShips = (usedCells) => {
-  const doubleShipsCoords = []
+export const createDoubleShips = (usedCells, doubleShips) => {
   let numberOfShips = 0
 
   while (numberOfShips < 3) {
@@ -44,7 +41,7 @@ export const createDoubleShips = (usedCells) => {
       const secondCell = `${x+1}-${y}`
 
       if (!usedCells.includes(firstCell) && !usedCells.includes(secondCell)) {
-        doubleShipsCoords.push([firstCell, secondCell])
+        doubleShips.push([firstCell, secondCell])
         let closeCells = [`${x-1}-${y-1}`, `${x}-${y-1}`, `${x+1}-${y-1}`, `${x+2}-${y-1}`,
                           `${x-1}-${y}`, `${x}-${y}`, `${x+1}-${y}`, `${x+2}-${y}`,
                           `${x-1}-${y+1}`, `${x}-${y+1}`, `${x+1}-${y+1}`, `${x+2}-${y+1}`]
@@ -61,7 +58,7 @@ export const createDoubleShips = (usedCells) => {
         const secondCell = `${x}-${y+1}`
 
         if (!usedCells.includes(firstCell) && !usedCells.includes(secondCell)) {
-          doubleShipsCoords.push([firstCell, secondCell])
+          doubleShips.push([firstCell, secondCell])
           let closeCells = [`${x-1}-${y-1}`, `${x}-${y-1}`, `${x+1}-${y-1}`,
                             `${x-1}-${y}`, `${x}-${y}`, `${x+1}-${y}`,
                             `${x-1}-${y+1}`, `${x}-${y+1}`, `${x+1}-${y+1}`,
@@ -75,11 +72,9 @@ export const createDoubleShips = (usedCells) => {
       }
     }
   }
-  console.log(doubleShipsCoords)
 }
 
-export const createTripleShip = (usedCells) => {
-  const tripleShipsCoords = []
+export const createTripleShip = (usedCells, tripleShips) => {
   let numberOfShips = 0
 
   while (numberOfShips < 2) {
@@ -93,7 +88,7 @@ export const createTripleShip = (usedCells) => {
       const thirdCell = `${x+2}-${y}`
 
       if (!usedCells.includes(firstCell) && !usedCells.includes(secondCell) && !usedCells.includes(thirdCell)) {
-        tripleShipsCoords.push([firstCell, secondCell, thirdCell])
+        tripleShips.push([firstCell, secondCell, thirdCell])
         let closeCells = [`${x-1}-${y-1}`, `${x}-${y-1}`, `${x+1}-${y-1}`, `${x+2}-${y-1}`, `${x+3}-${y-1}`,
                           `${x-1}-${y}`, `${x}-${y}`, `${x+1}-${y}`, `${x+2}-${y}`, `${x+3}-${y}`,
                           `${x-1}-${y+1}`, `${x}-${y+1}`, `${x+1}-${y+1}`, `${x+2}-${y+1}`, `${x+3}-${y+1}`]
@@ -111,7 +106,7 @@ export const createTripleShip = (usedCells) => {
         const thirdCell = `${x}-${y+2}`
 
         if (!usedCells.includes(firstCell) && !usedCells.includes(secondCell) && !usedCells.includes(thirdCell)) {
-          tripleShipsCoords.push([firstCell, secondCell, thirdCell])
+          tripleShips.push([firstCell, secondCell, thirdCell])
           let closeCells = [`${x-1}-${y-1}`, `${x}-${y-1}`, `${x+1}-${y-1}`,
                             `${x-1}-${y}`,  `${x}-${y}`, `${x+1}-${y}`,
                             `${x-1}-${y+1}`, `${x}-${y+1}`, `${x+1}-${y+1}`,
@@ -126,11 +121,9 @@ export const createTripleShip = (usedCells) => {
       }
     }
   }
-  console.log(tripleShipsCoords)
 }
 
-export const createBigShip = (usedCells) => {
-  const bigShipCoords = []
+export const createBigShip = (usedCells, bigShip) => {
   let numberOfShips = 0
 
   while (numberOfShips < 1) {
@@ -145,7 +138,7 @@ export const createBigShip = (usedCells) => {
       const lastCell = `${x+3}-${y}`
 
       if (!usedCells.includes(firstCell) && !usedCells.includes(secondCell) && !usedCells.includes(thirdCell) && !usedCells.includes(lastCell)) {
-        bigShipCoords.push(firstCell, secondCell, thirdCell, lastCell)
+        bigShip.push(firstCell, secondCell, thirdCell, lastCell)
         let closeCells = [`${x-1}-${y-1}`, `${x}-${y-1}`, `${x+1}-${y-1}`, `${x+2}-${y-1}`, `${x+3}-${y-1}`, `${x+4}-${y-1}`,
                           `${x-1}-${y}`, `${x}-${y}`, `${x+1}-${y}`, `${x+2}-${y}`, `${x+3}-${y}`, `${x+4}-${y}`,
                           `${x-1}-${y+1}`, `${x}-${y+1}`, `${x+1}-${y+1}`, `${x+2}-${y+1}`, `${x+3}-${y+1}`, `${x+4}-${y+1}`]
@@ -164,7 +157,7 @@ export const createBigShip = (usedCells) => {
         const lastCell = `${x}-${y+3}`
 
         if (!usedCells.includes(firstCell) && !usedCells.includes(secondCell) && !usedCells.includes(thirdCell) && !usedCells.includes(lastCell)) {
-          bigShipCoords.push(firstCell, secondCell, thirdCell, lastCell)
+          bigShip.push(firstCell, secondCell, thirdCell, lastCell)
           let closeCells = [`${x-1}-${y-1}`, `${x}-${y-1}`, `${x+1}-${y-1}`,
                             `${x-1}-${y}`,  `${x}-${y}`, `${x+1}-${y}`,
                             `${x-1}-${y+1}`, `${x}-${y+1}`, `${x+1}-${y+1}`,
@@ -176,9 +169,8 @@ export const createBigShip = (usedCells) => {
             if (!usedCells.includes(item)) usedCells.push(item)
           })
           numberOfShips +=1
-        }
+         }
       }
     }
   }
-  console.log(bigShipCoords)
 }
