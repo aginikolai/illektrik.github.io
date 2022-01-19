@@ -4,6 +4,7 @@ export class NewGame {
   constructor(selector, options) {
     // Создаем новоый элемент класса dom
     this.$el = $(selector)
+    this.store = options.store
     this.components = options.components || []
   }
 
@@ -12,11 +13,15 @@ export class NewGame {
   getRoot() {
     const $root = $.create('div', 'game_window')
 
+    const componentOptions = {
+      store: this.store
+    }
+
     this.components = this.components.map(Component => {
       // берем методы из класса dom но не через создание нового класса, а через вызов функции
       const $el = $.create('div', Component.className)
       // Component это один из массива компонентов, который мы изничально передали для перебора
-      const component = new Component($el)
+      const component = new Component($el, componentOptions)
       // вызываем метод класса dom что бы отобразить верстку
       $el.html(component.toHTML())
       // Добавляем новый компонент в разментку

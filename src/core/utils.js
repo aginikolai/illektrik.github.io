@@ -174,3 +174,38 @@ export const createBigShip = (usedCells, bigShip) => {
     }
   }
 }
+
+export const checkingShoot = (singleShips, doubleShips, tripleShips, bigShip, shoot) => {
+  if (singleShips.some((item) => item.includes(shoot))) {
+    const hitted = didHit(singleShips, shoot)
+    console.log(hitted)
+
+    return 'single'
+  } else if (doubleShips.some(item => item.includes(shoot))) {
+    const hitted = didHit(doubleShips, shoot)
+    console.log(hitted)
+
+    return 'double'
+  } else if (tripleShips.some(item => item.includes(shoot))) {
+    const hitted = didHit(tripleShips, shoot)
+    console.log(hitted)
+
+    return 'triple'
+  } else if (bigShip.some(item => item.includes(shoot))) {
+    const hitted = bigShip.filter(item => item !== shoot)
+    console.log(hitted)
+
+    return 'big'
+  } else {
+    return 'missed'
+  }
+}
+
+const didHit = (ships, shoot) => {
+  return ships.map(item => {
+    if (item.includes(shoot)) {
+      return item.filter(coords => coords !== shoot)
+    }
+    return item
+  })
+}
