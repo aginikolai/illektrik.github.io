@@ -177,27 +177,34 @@ export const createBigShip = (usedCells, bigShip) => {
 
 export const checkingShoot = (singleShips, doubleShips, tripleShips, bigShip, shoot) => {
   if (singleShips.some((item) => item.includes(shoot))) {
-    const hitted = didHit(singleShips, shoot)
-    console.log(hitted)
-
-    return 'single'
+    const ships = didHit(singleShips, shoot)
+    return {
+      type: 'single',
+      ships
+    }
   } else if (doubleShips.some(item => item.includes(shoot))) {
-    const hitted = didHit(doubleShips, shoot)
-    console.log(hitted)
-
-    return 'double'
+    const ships = didHit(doubleShips, shoot)
+    return {
+      type: 'double',
+      ships
+    }
   } else if (tripleShips.some(item => item.includes(shoot))) {
-    const hitted = didHit(tripleShips, shoot)
-    console.log(hitted)
-
-    return 'triple'
+    const ships = didHit(tripleShips, shoot)
+    return {
+      type: 'triple',
+      ships
+    }
   } else if (bigShip.some(item => item.includes(shoot))) {
-    const hitted = bigShip.filter(item => item !== shoot)
-    console.log(hitted)
+    const ships = bigShip.filter(item => item !== shoot)
 
-    return 'big'
+    return {
+      type: 'big',
+      ships
+    }
   } else {
-    return 'missed'
+    return {
+      type: 'missed'
+    }
   }
 }
 
