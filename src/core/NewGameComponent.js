@@ -26,8 +26,12 @@ export class NewGameComponent extends DomListener {
     this.storeSub = this.store.subscribe(fn)
   }
 
+  $getState() {
+    return this.store.getState().shootsMade
+  }
+
   shootOnCell() {
-    this.$dispatch({type: 'TEST'})
+
   }
 
   init() {

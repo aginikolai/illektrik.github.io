@@ -7,10 +7,11 @@ import {GameFieldSelection} from "./GameFieldSelection";
 export class GameField extends NewGameComponent {
   static className = 'wrapper'
 
-  constructor($root) {
+  constructor($root, options) {
     super($root, {
       name: 'GameField',
-      listeners: ['click']
+      listeners: ['click'],
+      ...options
     });
   }
 
@@ -29,17 +30,20 @@ export class GameField extends NewGameComponent {
     super.init()
   }
 
+  //todo: написать метод, который после каждого выстрела будет проверять, сколько массивов пустые
+
   onClick(event) {
     if (event.target.dataset.coords) {
       const {coords} = event.target.dataset
       const shoot = checkingShoot(this.singleShips, this.doubleShips, this.tripleShips, this.bigShip, coords)
-
-      console.log(shoot)
+      // this.$dispatch({type: 'TEST'})
+      // console.log(shoot)
       // запилить функцию-проверку на то, что точка совпадает с какой-либо точкой выствленных краблей и добавить classname или что-то еще
       if (!this.shoots.includes(coords)) {
         this.shoots.push(coords)
         // console.log(this.shoots.length)
         const $target = $(event.target)
+        this.$dispatch({type: 'MAKE_SHOOT', payload: this.shoots.length})
         switch (shoot.type) {
           case 'missed':
             return $target.html('<p>X</p>')

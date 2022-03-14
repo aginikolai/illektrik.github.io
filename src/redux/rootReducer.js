@@ -1,3 +1,10 @@
 export function rootReducer (state, action) {
-  return state
+  switch (action.type) {
+    case 'MAKE_SHOOT':
+      return {
+        ...state,
+        shootsMade: action.payload
+      }
+    default: return state
+  }
 }
