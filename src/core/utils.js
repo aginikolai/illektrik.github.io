@@ -196,7 +196,6 @@ export const checkingShoot = (singleShips, doubleShips, tripleShips, bigShip, sh
     }
   } else if (bigShip.some(item => item.includes(shoot))) {
     const ships = bigShip.filter(item => item !== shoot)
-
     return {
       type: 'big',
       ships
