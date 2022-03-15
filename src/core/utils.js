@@ -215,3 +215,16 @@ const didHit = (ships, shoot) => {
     return item
   })
 }
+
+export const countSunkShips = (single, double, triple, big) => {
+  let count = 0;
+  if (big.length === 0) count +=1
+  let arrayCheck = (array) => {
+    array.forEach(ship => ship.length === 0 ? count+=1 : null)
+  }
+  arrayCheck(triple)
+  arrayCheck(double)
+  arrayCheck(single)
+
+  return count
+}

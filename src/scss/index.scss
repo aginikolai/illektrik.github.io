@@ -42,11 +42,15 @@ body {
   width: 37vw;
   min-height: 150px;
   border: 1px solid black;
+  padding-left: 3.36vw;
+  padding-top: 15px;
   @media screen and (max-width: 1024px) {
     width: 70vw;
+    padding-left: 6.36vw;
   }
   @media screen and (max-width: 567px) {
     width: 85vw;
+    padding-left: 7.725vw;
   }
 }
 
@@ -88,4 +92,9 @@ body {
 
 .battle_cell--red {
   background-color: red;
+}
+
+
+.battle_shots {
+  margin-bottom: 15px;
 }

@@ -1,7 +1,14 @@
 import {NewGameComponent} from "../../core/NewGameComponent";
 import {createGameField} from "./gameField.template";
 import {$} from "../../core/dom";
-import {createDoubleShips, createSingleShips, createBigShip, createTripleShip, checkingShoot} from '../../core/utils'
+import {
+  createDoubleShips, 
+  createSingleShips, 
+  createBigShip, 
+  createTripleShip, 
+  checkingShoot,
+  countSunkShips
+} from '../../core/utils'
 import {GameFieldSelection} from "./GameFieldSelection";
 
 export class GameField extends NewGameComponent {
@@ -30,15 +37,16 @@ export class GameField extends NewGameComponent {
     super.init()
   }
 
-  //todo: написать метод, который после каждого выстрела будет проверять, сколько массивов пустые
+  countShips() {
+    const count = countSunkShips(this.singleShips, this.doubleShips, this.tripleShips, this.bigShip)
+    this.$dispatch({type: 'SHIP_SUNK', payload: count})
+  }
 
   onClick(event) {
     if (event.target.dataset.coords) {
       const {coords} = event.target.dataset
       const shoot = checkingShoot(this.singleShips, this.doubleShips, this.tripleShips, this.bigShip, coords)
-      // this.$dispatch({type: 'TEST'})
-      // console.log(shoot)
-      // запилить функцию-проверку на то, что точка совпадает с какой-либо точкой выствленных краблей и добавить classname или что-то еще
+      
       if (!this.shoots.includes(coords)) {
         this.shoots.push(coords)
         // console.log(this.shoots.length)
@@ -50,23 +58,26 @@ export class GameField extends NewGameComponent {
           case 'single':
             $target.$el.classList.add('battle_cell--red')
             this.singleShips = shoot.ships
+            this.countShips()
             return $target.html('<p>1</p>')
           case 'double':
             $target.$el.classList.add('battle_cell--red')
             this.doubleShips = shoot.ships
+            this.countShips()
             return $target.html('<p>2</p>')
           case 'triple':
             $target.$el.classList.add('battle_cell--red')
             this.tripleShips = shoot.ships
+            this.countShips()
             return $target.html('<p>3</p>')
           case 'big':
             $target.$el.classList.add('battle_cell--red')
             this.bigShip = shoot.ships
+            this.countShips()
             return $target.html('<p>4</p>')
           default: return
         }
       }
-
     }
   }
 
