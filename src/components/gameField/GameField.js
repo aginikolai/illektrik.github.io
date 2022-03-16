@@ -40,6 +40,7 @@ export class GameField extends NewGameComponent {
   countShips() {
     const count = countSunkShips(this.singleShips, this.doubleShips, this.tripleShips, this.bigShip)
     this.$dispatch({type: 'SHIP_SUNK', payload: count})
+    if (count === 10) window.location = `/#stats/${this.shoots.length}`
   }
 
   onClick(event) {

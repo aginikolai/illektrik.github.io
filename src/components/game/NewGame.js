@@ -1,9 +1,8 @@
 import {$} from '../../core/dom'
 
 export class NewGame {
-  constructor(selector, options) {
+  constructor(options) {
     // Создаем новоый элемент класса dom
-    this.$el = $(selector)
     this.store = options.store
     this.components = options.components || []
   }
@@ -33,7 +32,6 @@ export class NewGame {
   //
 
   render() {
-    this.$el.append(this.getRoot())
 
     this.components.forEach(component => component.init())
   }
