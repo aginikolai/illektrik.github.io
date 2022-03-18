@@ -4,7 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "start": "webpack-dev-server --open",
     "build": "webpack --mode production"
   },
@@ -20,6 +21,7 @@
     "css-extract-plugin": "0.0.1",
     "css-loader": "^6.5.1",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.5.1",
     "mini": "^1.1.0",
     "node-sass": "^7.0.0",
     "sass-loader": "^12.4.0",
